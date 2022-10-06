@@ -16,3 +16,8 @@
 .cart-container h3 {
   color: #000;
 }
+
+.menu .active {
+  background: inherit;
+  color: #FF9900;
+}

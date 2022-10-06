@@ -9,7 +9,10 @@ const Product = ({ product, handleAddToCart }) => {
         <div className='single-product'>
             <div className="card relative rounded-[8px] border-solid border-[1px] border-[#95A0A7] w-[300px] h-[500px]">
                 <figure className='w-full mx-auto '>
-                    <img className='w-full h-[286px] p-[8px] rounded-[8px]' src={img} alt="Shoes" />
+                    <img
+                        className='w-full h-[286px] p-[8px] rounded-[8px]'
+                        
+                        src={img} alt="Shoes" />
                 </figure>
                 <div className="card-body flex-none p-[14px]">
                     <h2 className="card-title text-[22px] tracking-[0.0015em] text-[#0E161A]">
