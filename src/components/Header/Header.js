@@ -8,10 +8,13 @@ const Header = () => {
     const menuItems = <>
         <li><NavLink to='/shop' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Shop</NavLink></li>
         <li><NavLink to='/products' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Products</NavLink></li>
+        <li><NavLink to='/orders' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Orders</NavLink></li>
+        <li><NavLink to='/about' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>About</NavLink></li>
+        <li><NavLink to='/friends' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Friends</NavLink></li>
         <li><NavLink to='/manageInventory' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Manage Inventory</NavLink></li>
         <li><NavLink to='/orderReview' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Order Review</NavLink></li>
-        <li><label htmlFor="my-drawer-4" className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Cart</label></li>
-        <li><NavLink to='/login' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Login</NavLink></li>
+        {/* <li><label htmlFor="my-drawer-4" className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Cart</label></li> */}
+        {/* <li><NavLink to='/login' className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Login</NavLink></li> */}
     </>;
 
 
