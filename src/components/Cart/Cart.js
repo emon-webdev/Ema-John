@@ -39,7 +39,7 @@ const Cart = ({ cart, clearCart, children }) => {
         Grand Total:
         <span className="fot-bold"> {grandTotal}</span>
       </h2>
-      <div className=" text-center">
+      <div className="">
         <div>
           <button
             onClick={clearCart}

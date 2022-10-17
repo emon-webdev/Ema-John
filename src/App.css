@@ -19,5 +19,14 @@
 
 .menu .active {
   background: inherit;
-  color: #FF9900;
+  color: #ff9900;
+}
+
+/* login css */
+.input:focus {
+  outline-color: #ff9900;
+}
+
+.hero-content {
+  box-shadow: -12px 12px #ffe0b3;
 }
