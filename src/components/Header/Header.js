@@ -4,16 +4,14 @@ import { AuthContext } from "../../context/UserContext";
 import logo from "../../images/Logo.svg";
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
-  console.log(user)
-  
+  const { user, logOut } = useContext(AuthContext);
+
   const menuItems = (
     <>
       <li>
         <NavLink
           to="/shop"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-          href="#"
         >
           Shop
         </NavLink>
@@ -22,7 +20,6 @@ const Header = () => {
         <NavLink
           to="/products"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-          href="#"
         >
           Products
         </NavLink>
@@ -31,7 +28,6 @@ const Header = () => {
         <NavLink
           to="/orders"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-          href="#"
         >
           Orders
         </NavLink>
@@ -40,7 +36,6 @@ const Header = () => {
         <NavLink
           to="/about"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-          href="#"
         >
           About
         </NavLink>
@@ -58,41 +53,62 @@ const Header = () => {
         <NavLink
           to="/orderReview"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-          href="#"
         >
           Order Review
         </NavLink>
       </li>
       {/* <li><label htmlFor="my-drawer-4" className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Cart</label></li> */}
-      <li>
-          <NavLink
-            to="/signup"
+
+      {user ? (
+        <div className="dropdown dropdown-end">
+          <label
+            tabIndex={0}
             className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-            href="#"
           >
-            Sign Up
-          </NavLink>
-        </li>
-      {user.uid ? (
-        <li>
-          <NavLink
-            to="/signup"
-            className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-            href="#"
+            {user?.displayName || user?.email?.toUpperCase().split('@GMAIL.COM', ".com")}
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu dropdown-content p-2 bg-[#1C2B35] shadow  rounded-box w-52 mt-4"
           >
-            Sign Up
-          </NavLink>
-        </li>
+            <li>
+              <label
+                htmlFor="my-drawer-4"
+                className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
+                href="#"
+              >
+                Cart
+              </label>
+            </li>
+            <li>
+              <button
+                onClick={logOut}
+                className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
+              >
+                Sign Out
+              </button>
+            </li>
+          </ul>
+        </div>
       ) : (
-        <li>
-          <NavLink
-            to="/login"
-            className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-            href="#"
-          >
-            Log In
-          </NavLink>
-        </li>
+        <>
+          <li>
+            <NavLink
+              to="/signup"
+              className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
+            >
+              Sign Up
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
+            >
+              Log In
+            </NavLink>
+          </li>
+        </>
       )}
     </>
   );
@@ -124,7 +140,7 @@ const Header = () => {
               </label>
               <ul
                 tabIndex="0"
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu items-center menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {menuItems}
               </ul>
@@ -134,7 +150,9 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="navbar-end w-auto hidden lg:flex">
-            <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+            <ul className="menu items-center menu-horizontal p-0">
+              {menuItems}
+            </ul>
           </div>
         </div>
       </div>

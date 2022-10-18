@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Line from "../../images/line.png";
 const NotFound = () => {
   return (
-    <div class="min-h-screen flex justify-center items-center">
-      <div class="">
+    <div className="min-h-screen flex justify-center items-center">
+      <div className="">
         <div className="flex justify-center items-center">
-          <h2 class="text-[62px]">404</h2>
+          <h2 className="text-[62px]">404</h2>
           <img src={Line} className="w-[3px] h-[57px] mx-9" alt="" srcset="" />
           <p className="text-[62px]">Nothing here to see</p>
         </div>

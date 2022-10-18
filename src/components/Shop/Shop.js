@@ -65,7 +65,7 @@ const Shop = () => {
         <div className="cart-container min-w-[264px] min-h-screen right-0  bg-[#FFE0B3] pl-4 pr-4 ">
           <Cart cart={cart} clearCart={clearCart}>
             <Link
-              to="/"
+              to="/orders"
               className="w-[232px] h-[48px] leading-[48px] text-[18px] block text-center text-white rounded-md bg-[#FF9900]"
             >
               Review Order
