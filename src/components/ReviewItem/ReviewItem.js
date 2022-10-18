@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const ReviewItem = ({ product, handleRemoveItem }) => {
-  console.log(product);
   const {id, name, img, price, shipping, quantity } = product;
 
   return (
@@ -13,7 +12,7 @@ const ReviewItem = ({ product, handleRemoveItem }) => {
           className="w-[90px] h-full mr-[18px] rounded-md"
           src={img}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <div>
           <h2>{name.length < 25 ? name : name.slice(0, 25) + "  . . ."}</h2>

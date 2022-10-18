@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
+import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Orders from "./components/Orders/Orders";
@@ -45,6 +46,10 @@ function App() {
         {
           path: "/about",
           element: <About />,
+        },
+        {
+          path: "/inventory",
+          element: <PrivateRoute><Inventory/></PrivateRoute>,
         },
         {
           path: "/login",

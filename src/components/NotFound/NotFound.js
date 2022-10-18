@@ -7,7 +7,7 @@ const NotFound = () => {
       <div className="">
         <div className="flex justify-center items-center">
           <h2 className="text-[62px]">404</h2>
-          <img src={Line} className="w-[3px] h-[57px] mx-9" alt="" srcset="" />
+          <img src={Line} className="w-[3px] h-[57px] mx-9" alt="" srcSet="" />
           <p className="text-[62px]">Nothing here to see</p>
         </div>
         <div className="text-center mt-2">

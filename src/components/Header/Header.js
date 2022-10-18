@@ -42,11 +42,11 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/manageInventory"
+          to="/inventory"
           className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
           href="#"
         >
-          Manage Inventory
+           Inventory
         </NavLink>
       </li>
       <li>
@@ -65,7 +65,7 @@ const Header = () => {
             tabIndex={0}
             className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
           >
-            {user?.displayName || user?.email?.toUpperCase().split('@GMAIL.COM', ".com")}
+            {user?.displayName || user?.email?.toUpperCase().split('@GMAIL.COM' || ".com")}
           </label>
           <ul
             tabIndex={0}

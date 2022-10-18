@@ -13,7 +13,7 @@ const Home = () => {
                         <Link to='/shop' className='text-[#0E161A] w-[200px] h-[56px] leading-[56px] text-center bg-[#FF9900] inline'>SHOP NOW</Link>
                     </div>
                     <div className="hero-img">
-                        <img className='rounded-lg' src={HeroImg} alt="" srcset="" />
+                        <img className='rounded-lg' src={HeroImg} alt="" srcSet="" />
                     </div>
                 </div>
             </div>

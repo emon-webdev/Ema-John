@@ -24,7 +24,7 @@
 
 /* login css */
 .input:focus {
-  outline-color: #ff9900;
+  outline-color: #ff9900 !important;
 }
 
 .hero-content {

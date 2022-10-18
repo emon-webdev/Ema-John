@@ -18,6 +18,7 @@ const UserContext = ({ children }) => {
   const [loading, setLoading] = useState(true);
   //create user for firebase
   const createUser = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -29,6 +30,7 @@ const UserContext = ({ children }) => {
 
   //sign out user from ui
   const logOut = () => {
+    setLoading(true)
     return signOut(auth);
   };
 
