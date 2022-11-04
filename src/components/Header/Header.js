@@ -49,14 +49,6 @@ const Header = () => {
            Inventory
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/orderReview"
-          className="text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]"
-        >
-          Order Review
-        </NavLink>
-      </li>
       {/* <li><label htmlFor="my-drawer-4" className='text-white ml-2 hover:text-[#FF9900] text-[17px] font-medium tracking-[0.005em]' href='#'>Cart</label></li> */}
 
       {user ? (

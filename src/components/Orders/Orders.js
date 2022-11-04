@@ -12,7 +12,7 @@ const Orders = () => {
   //delete order item
   const handleRemoveItem = (id) => {
     console.log("delete", id);
-    const remaining = cart.filter((product) => product.id !== id);
+    const remaining = cart.filter((product) => product._id !== id);
     setCart(remaining);
     removeFromDb(id);
   };
@@ -28,7 +28,7 @@ const Orders = () => {
         <div className="orders-container mt-4 py-12">
           {cart.map((product) => (
             <ReviewItem
-              key={product.id}
+              key={product._id}
               product={product}
               handleRemoveItem={handleRemoveItem}
             />

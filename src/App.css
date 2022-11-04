@@ -30,3 +30,9 @@
 .hero-content {
   box-shadow: -12px 12px #ffe0b3;
 }
+/* //pagination */
+
+.pagination .selected {
+  background-color: goldenrod;
+  border: gold;
+}

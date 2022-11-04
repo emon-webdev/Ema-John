@@ -1,9 +1,9 @@
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signOut
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import app from "../Firebase/Firebase.init";
@@ -37,12 +37,11 @@ const UserContext = ({ children }) => {
   //current user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser, "current User ");
       setUser(currentUser);
       setLoading(false)
     });
 
-    return () => unSubscribe;
+    return () => unSubscribe();
   }, []);
 
   //send Data any where
